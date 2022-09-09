@@ -1,6 +1,6 @@
 import React from 'react'
-import { Counter } from './features/counter/Counter'
 import './App.css'
+import Header from './components/Header'
 /*const firebaseConfig = {
   apiKey: "AIzaSyC1bJrcNQ9Dshiv0aCztXgXMMBxYJ6uJV0",
   authDomain: "linkedin-clone-91b73.firebaseapp.com",
@@ -12,8 +12,12 @@ import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Linkedin</h1>
+    <div className="app">
+      <Header />
+      {/* App body */}
+      {/* Sidebar */}
+      {/* Feed */}
+      {/* Widgets */}
     </div>
   )
 }
