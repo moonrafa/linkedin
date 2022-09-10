@@ -13,3 +13,8 @@
   font-size: 0.75rem;
   font-weight: 400;
 }
+.header__option__icon {
+  object-fit: contain;
+  height: 1.5625rem !important;
+  width: 1.5625rem !important;
+}

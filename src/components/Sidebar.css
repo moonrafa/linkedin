@@ -1,0 +1,92 @@
+.sidebar {
+  top: 5rem;
+  position: sticky;
+  flex: 0.2; /*20%*/
+  border-radius: 0.625rem;
+  text-align: center;
+  height: fit-content;
+}
+.sidebar__avatar {
+  margin-bottom: 0.625rem;
+}
+.sidebar__top > h4 {
+  font-size: 0.75rem;
+  color: gray;
+}
+.sidebar__top > h2 {
+  font-size: 1.125rem;
+}
+.sidebar__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-bottom: 0;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+  background-color: white;
+  padding-bottom: 0.625rem;
+}
+.sidebar__top > img {
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: -1.25rem;
+  height: 3.75rem;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+.sidebar__stats {
+  border: 1px solid lightgray;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  background-color: white;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+.sidebar__stat {
+  margin-top: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar__stat > p {
+  color: gray;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.sidebar__stats .sidebar__statNumber {
+  font-weight: bold;
+  color: #0077b5;
+}
+
+.sidebar__bottom {
+  text-align: left;
+  padding: 0.625rem;
+  border: 1px solid lightgray;
+  border-radius: 0.625rem;
+  margin-top: 0.625rem;
+  background-color: white;
+}
+.sidebar__bottom > p {
+  font-size: 0.8125rem;
+  padding-bottom: 0.625rem;
+}
+
+.sidebar__recentItem {
+  display: flex;
+  font-size: 0.8125rem;
+  font-weight: bolder;
+  color: gray;
+  padding: 0.3125rem;
+  margin-bottom: 0.3125rem;
+  cursor: pointer;
+}
+.sidebar__recentItem:hover {
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 0.625rem;
+  cursor: pointer;
+}
+.sidebar__hash {
+  margin-right: 0.625rem;
+  margin-left: 0.3125rem;
+}
