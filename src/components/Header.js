@@ -16,7 +16,7 @@ function Header() {
         <img src={logo} alt="" />
         <div className="header__search">
           <SearchIcon />
-          <input type="text" placeholder="Type to search..." />
+          <input type="text" placeholder="Search" />
         </div>
       </div>
       <div className="header__right">
@@ -26,7 +26,7 @@ function Header() {
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
         <HeaderOption
-          avatar="https://avatars.githubusercontent.com/u/107719775?v=4"
+          avatar="https://media-exp1.licdn.com/dms/image/D4E03AQFgYltTP93Sqw/profile-displayphoto-shrink_200_200/0/1662852548098?e=1668643200&v=beta&t=8vsnS7JSHKUmu7GqZJNpNhfg73jQcT10sAILmzR2Ods"
           title="Me"
         />
       </div>
