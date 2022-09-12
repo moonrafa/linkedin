@@ -8,7 +8,7 @@ import SubscriptionsIcon from '@material-ui/icons/Subscriptions'
 import EventNoteIcon from '@material-ui/icons/EventNote'
 import Posts from './Posts'
 import { useEffect } from 'react'
-import { db, timestamp } from './firebase'
+import { db, timestamp } from '../firebase'
 
 function Feed() {
   const [input, setInput] = useState('')
