@@ -9,8 +9,12 @@ import EventNoteIcon from '@material-ui/icons/EventNote'
 import Posts from './Posts'
 import { useEffect } from 'react'
 import { db, timestamp } from '../firebase'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../features/userSlice'
+import FlipMove from 'react-flip-move'
 
 function Feed() {
+  const user = useSelector(selectUser)
   const [input, setInput] = useState('')
   const [posts, setPosts] = useState([])
   useEffect(() => {
@@ -29,10 +33,10 @@ function Feed() {
   const sendPost = e => {
     e.preventDefault()
     db.collection('posts').add({
-      name: 'Rafaelly Rodrigues',
-      description: 'err',
+      name: user.displayName,
+      description: user.email,
       message: input,
-      photoUrl: '',
+      photoUrl: user.photoUrl || '',
       timestamp: timestamp()
     })
     setInput('')
@@ -47,6 +51,7 @@ function Feed() {
               value={input}
               onChange={e => setInput(e.target.value)}
               type="text"
+              placeholder="Start a post"
             />
             <button type="submit" onClick={sendPost}>
               Send
@@ -64,15 +69,17 @@ function Feed() {
           />
         </div>
       </div>
-      {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-        <Posts
-          key={id}
-          name={name}
-          description={description}
-          message={message}
-          photoUrl={photoUrl}
-        />
-      ))}
+      <FlipMove>
+        {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+          <Posts
+            key={id}
+            name={name}
+            description={description}
+            message={message}
+            photoUrl={photoUrl}
+          />
+        ))}
+      </FlipMove>
     </div>
   )
 }

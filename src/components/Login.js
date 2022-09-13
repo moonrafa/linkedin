@@ -38,6 +38,19 @@ function Login() {
   }
   const loginToApp = e => {
     e.preventDefault()
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then(userAuth => {
+        dispatch(
+          login({
+            email: userAuth.user.email,
+            uid: userAuth.user.uid,
+            displayName: userAuth.user.displayName,
+            profilePic: userAuth.user.photoURL
+          })
+        )
+      })
+      .catch(error => alert(error))
   }
   return (
     <div className="login">
@@ -51,7 +64,6 @@ function Login() {
           placeholder="Full Name(required if registering)"
           value={name}
           onChange={e => setName(e.target.value)}
-          required
         />
         <input
           type="url"
