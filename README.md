@@ -12,8 +12,11 @@
 ## Demo
 
 - home
+
   <img src="src/utils/demo1.png" alt="linkedin home">
-  -login page
+  
+- login page
+
   <img src="src/utils/demo2.png" alt="linkedin login">
 
 ## Author
